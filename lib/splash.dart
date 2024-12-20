@@ -1,32 +1,19 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(Splash());
-}
+// Main function 
+void main() => runApp(SplashScreen());
 
-class Splash extends StatelessWidget {
+// Class Splash
+class SplashScreen extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.blue[300],
+  Widget build (BuildContext context) {
+    return (
+      Scaffold (
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(height: 20),
-              Container(
-                width: 300, // Set the desired width
-                height: 300, // Set the desired height
-                child: Image.asset(
-                  'assets/images/chill_guy.png', 
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ],
-          ),
-        ),
+          child: Image.asset("assets/images/chill_guy.png"),
       ),
-    );
+      backgroundColor: Colors.blue[200],
+    )
+  );
   }
 }
