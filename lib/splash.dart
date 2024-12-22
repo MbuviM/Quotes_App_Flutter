@@ -10,10 +10,16 @@ class SplashScreen extends StatelessWidget {
     return (
       Scaffold (
         body: Center(
-          child: Image.asset("assets/images/chill_guy.png"),
+          child: Image.asset("assets/images/chill_guy.png"), 
       ),
+      TextButton(
+      onPressed: () {
+        Navigator.pop("Morning");
+      },
+      child: Text("Get Started")
+    ),
       backgroundColor: Colors.blue[200],
     )
-  );
+    );
   }
 }
